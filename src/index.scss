@@ -1,0 +1,63 @@
+@import "/node_modules/modern-normalize/modern-normalize.css";
+@font-face {
+      font-family: "Barlow";
+      src: url('../node_modules/@fontsource/barlow/');
+}
+@font-face {
+      font-family: "Inter";
+      src: url('../node_modules/@fontsource/inter/');
+}
+
+
+
+/* * {
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+} */
+
+/* Водим правила:  */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ol,
+ul,
+figure {
+    margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", "Barlow", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family:
+    "Inter", "Barlow", sans-serif;
+}
