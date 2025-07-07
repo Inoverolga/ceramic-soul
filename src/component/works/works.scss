@@ -1,0 +1,115 @@
+@import "../../index.scss";
+
+.works {
+    padding-top: 3.75rem; //60px
+    padding-bottom: 3.75rem; //60px
+    &__slider {
+        margin-top: 2.5rem; //40px
+        padding-bottom: 2.8125rem; //45px
+    }
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .swiper__button-wrraper {
+        position: absolute;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+        top: -8.125rem; //130px
+        transform: translateY(-50%); //можем поставить по центру
+    }
+
+    .swiper-pagination-bullet {
+        width: 0.625rem; //10px;
+        height: 0.625rem; //10px;
+        background: $dark;
+        border-radius: 0%;
+        opacity: 1;
+        -webkit-tap-highlight-color: transparent; //это свойство говорит о том, что
+        //   когда мы нажимаем на дот цвет фокуса прозрачный становится и следовательно
+        //   применяется цвет который мы установили при нажатии
+    }
+    .swiper-pagination-bullet-active {
+        background: $ceramic;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .works {
+        &__slider {
+            margin-top: 2.8125rem; //45px
+        }
+        .swiper-slide {
+            display: block;
+            width: 25rem; //400px
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .works {
+        &__slider {
+            margin: 5rem 2.5rem 0 2.5rem; //80px
+            padding-bottom: 2.5rem; //40px в результате увеличения места для контента
+            // у нас вылез справа кусочек четвертого слайда => меняем padding на margin:
+            // padding-bottom: 2.5rem;
+            // margin: 5rem 2.5rem 0 2.5rem;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: relative;
+            display: block;
+            width: 0.5625rem; //9px
+            height: 1.375rem; //22px
+            color: $dark;
+        }
+        .swiper-button-prev {
+            left: 1rem; //16px;
+        }
+
+        .swiper-button-next {
+            right: -69.375rem; //-1110px
+        }
+        .swiper-pagination {
+            bottom: 0; //25px; но при просмотре на странице понагацию визуально не видно
+            //т.к. у родителского блока стоит сво-во overflow:hidden => все, что за пределами
+            //слайдера скрыто
+            //один из вариантов рещшения: увеличить блок самого слайдера  padding-bottom: 45px
+            //понагацию установить 0.
+            //
+        }
+    }
+}
+
+@media screen and (min-width: 120rem) {
+    .works {
+        padding-top: 6.25rem; //100px
+        padding-bottom: 6.25rem; //100px
+        &__slider {
+            margin: 5rem 2.625rem 0 2.625rem; //80px 42px 0 42px
+        }
+        .swiper-button-next {
+            right: -88.5rem; //-1400px
+        }
+        .swiper-slide {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .title-h2 {
+        font-size: 2.25rem; //36px
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .title-h2 {
+        font-size: 2.5rem; //40px
+    }
+}

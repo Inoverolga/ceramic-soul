@@ -1,0 +1,166 @@
+@import "../../index.scss";
+
+.catalogLink {
+    &__title-h1 {
+        margin-top: 3.75rem; //60px
+        @include title;
+        font-weight: 500;
+        font-size: 2rem; //32px;
+    }
+    &__tabs {
+        padding: 0.8125rem 1.5625rem; //13px; 35px
+        margin-top: 3.75rem; //60px
+        display: flex;
+        column-gap: 3.125rem; //50px;
+        row-gap: 0.8125rem; //13px;
+        flex-wrap: wrap;
+        border: 0.0625rem solid $dark; //1px solid var(--dark);
+    }
+    &__tab {
+        border: none; //убмраем базовые стили
+        background: none; //убираем базовые стили
+        font-weight: 500;
+        font-size: 1.25rem; //20px;
+        text-transform: uppercase;
+        color: #000;
+        list-style-type: none;
+        text-decoration: none;
+        padding: 0;
+        cursor: pointer;
+        &_active::after {
+            content: "";
+            display: block;
+            border: 0.0625rem solid #000;
+            width: 100%; //76px;
+            height: 0;
+        }
+    }
+    &__content {
+        margin-top: 3.75rem; //60px;
+    }
+    //     &__content-item {
+    //         &--visible {
+    //             display: block;
+    //         }
+
+    //         &--hidden {
+    //             display: none;
+    //         }
+    //     }
+    &__cards-wrapper {
+        margin-bottom: 3.75rem; //60px
+        display: flex;
+        flex-flow: column;
+        row-gap: 1.25rem; //20px
+
+        p {
+            padding-left: 0.745625rem; //11.93px
+            padding-right: 0.745625rem; //11.93px
+            font-weight: 500;
+            font-size: 1rem;
+            color: #000;
+        }
+    }
+    &__card {
+        box-shadow: 0.3125rem 0.3125rem 0.625rem 0 rgba(0, 0, 0, 0.25); //5px 5px 10px 0 rgba(0, 0, 0, 0.25)
+        background: $light;
+        img {
+            width: 100%;
+        }
+    }
+    &__card-infotext {
+        border: 0.0625rem solid $dark;
+        border-top: none;
+    }
+
+    &__card-text {
+        padding-top: 0.6875rem; //11px;
+    }
+    &__card-prise {
+        margin-top: 0.48125rem; //7.7px;
+        padding-bottom: 1.03125rem; //16.5px
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .catalogLink {
+        &__title-h1 {
+            font-size: 2.25rem; //3px;
+        }
+        &__tabs {
+            width: 28.6875rem; //459px;
+        }
+        &__cards-wrapper {
+            gap: 1.25rem; //20px
+            flex-flow: wrap;
+            padding: 0.625rem; //10px;
+            align-items: self-start; //при увеличении текста остальные карточки остаются неизменными
+        }
+        &__card {
+            width: calc(
+                (100% - 1.25rem) / 2
+            ); //только гэпы отнимаем без padding
+        }
+
+        &__content {
+            position: relative;
+
+            &-conteiner {
+                position: relative;
+            }
+            &-line22::before {
+                content: "";
+                display: block;
+                border: 0.0625rem solid $dark;
+                width: 12.5rem; //200px;
+                height: 0px;
+            }
+            &-line21::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                display: block;
+                border: 0.0625rem solid $dark;
+                width: 12.5rem;
+                height: 0px;
+                transform: rotate(90deg);
+                transform-origin: left top;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .catalogLink {
+        &__title-h1 {
+            font-size: 2.5rem; //40px;
+        }
+        &__cards-wrapper {
+            gap: 2.1875rem; //35px
+            padding: 1.5625rem; //25px;
+        }
+        &__card {
+            width: calc((100% - 4.375rem) / 3); //70px
+        }
+    }
+}
+
+@media screen and (min-width: 120rem) {
+    .catalogLink {
+        &__title-h1 {
+            margin-top: 6.25rem; //100px;
+        }
+        &__cards-wrapper {
+            row-gap: 1.5625rem; //25px
+            column-gap: 5.1875rem; //83px
+            justify-content: space-between;
+        }
+        &__card {
+            width: calc((100% - 15.5625rem) / 4); //249px(83*3)
+        }
+        &__cards-wrapper {
+            margin-bottom: 6.25rem; //100px
+        }
+    }
+}

@@ -1,0 +1,199 @@
+@import "../../index.scss";
+
+.git {
+    padding-top: 3.75rem; //60px
+    &__wrapper {
+        margin-top: 3.6875rem; //59px
+        display: block;
+    }
+    &__img {
+        display: none;
+    }
+    &__checkbox {
+        margin-top: 1.25rem; //20px
+        display: flex;
+        align-items: center;
+        flex-flow: wrap;
+        a {
+            font-weight: 400;
+            font-size: 0.875rem; //14px
+            line-height: 200%;
+            color: #a22dc6;
+            text-decoration: none;
+        }
+    }
+    &__checkbox-icon {
+        margin-right: 0.9375rem; //15px
+        width: 0.9375rem; //15px;
+        height: 0.9375rem; //15px;
+    }
+    &__button {
+        margin-top: 1.25rem; //20px
+        @include button;
+        font-size: 1rem;
+        width: 13.75rem; //220px;
+        height: 2.5rem; //40px;
+
+        &:focus {
+            border: none;
+            outline: 0.0625rem solid $ceramic;
+        }
+        &:disabled {
+            border: 0.0625rem solid $ui-disabled;
+            color: $ui-disabled;
+        }
+    }
+    &__vase {
+        display: none;
+    }
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__input {
+        @include input;
+        color: $dark;
+        min-height: 3rem; //48px
+        width: 100%; //340px
+    }
+    &__textarea {
+        @include input;
+        min-height: 8.25rem; //132px
+        resize: none;
+    }
+    &__input-text {
+        margin-top: 0.5rem; //8px
+    }
+    .just-validate-error-field {
+        //будет применяться только к формам git(в футоре нет)
+        border: none;
+        outline: 0.0625rem solid $ui-error;
+    }
+}
+
+label {
+    @include form;
+}
+
+@media screen and (min-width: 48rem) {
+    .title-h2 {
+        font-size: 2.25rem; //36px
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .title-h2 {
+        font-size: 2.5rem; //40px
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .git {
+        &__wrapper {
+            align-items: end;
+            margin-top: 2.8125rem; //45px
+        }
+        &__wrapper_form-vase {
+            position: relative;
+            // padding-left: 1.5rem; //24px
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            column-gap: 19.4375rem; //311px
+        }
+        &__vase {
+            position: absolute;
+            display: block;
+            width: 5.3125rem; //85px;
+            height: 5.3125rem; //85px;
+            transform: translateY(-85px);
+            right: 0;
+        }
+        &__input {
+            width: 18.75rem; //300px
+            display: block;
+        }
+
+        &__input-text {
+            width: 18.75rem; //300px
+        }
+        &__checkbox {
+            align-items: flex-start;
+            flex-flow: column;
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .git {
+        &__form-wrapper {
+            position: relative;
+        }
+        &__wrapper {
+            display: flex;
+            margin-top: 5rem; //80px
+            align-items: flex-start;
+            column-gap: 2.5rem; //40px
+        }
+        &__img {
+            display: block;
+            order: 1;
+            width: 34.375rem; //550px;
+            box-shadow: 0.3125rem 0.3125rem 0.625rem 0 rgba(0, 0, 0, 0.25); //5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+        }
+        &__wrapper_form-vase {
+            order: 2;
+            column-gap: 10.3125rem; //165px
+        }
+        &__input {
+            &:hover {
+                border: none;
+                outline: 0.0625rem solid $dark;
+            }
+        }
+        &__button {
+            &:hover {
+                color: $ceramic;
+                border: 0.0625rem solid $ceramic;
+            }
+            &:active {
+                color: $dark;
+                outline: 0.0625rem solid $ceramic;
+                border: none;
+            }
+        }
+        &__vase {
+            position: absolute;
+            right: -10.3125rem; //165px
+        }
+    }
+}
+
+@media screen and (min-width: 120rem) {
+    .git {
+        fieldset {
+            display: flex;
+            column-gap: 2.8125rem; //45px
+        }
+        &__wrapper {
+            margin-top: 6.25rem; //100px
+            column-gap: 9.1875rem;
+            &_form-vase {
+                padding-left: 0;
+            }
+        }
+
+        &__img {
+            min-width: 35.8125rem; //573px
+        }
+        &__vase {
+            transform: translateY(-85px);
+            position: absolute;
+            right: 0px;
+        }
+        &__form-wrapper {
+            position: relative;
+        }
+    }
+}

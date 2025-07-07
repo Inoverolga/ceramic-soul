@@ -1,0 +1,235 @@
+@import "../../index.scss";
+
+.footer {
+    padding-top: 3.125rem; //50px
+    background-color: $dark;
+    &__title-h3 {
+        font-weight: 500;
+        font-size: 1rem; //16px
+        text-transform: uppercase;
+        color: $light;
+    }
+    &__input {
+        margin-top: 2.5rem; //40px
+        position: relative;
+    }
+    &__input-email {
+        padding: 0rem;
+        margin-top: 2.5rem; //40px
+        background: $dark;
+        border: none;
+        border-bottom: 0.0625rem solid $ui-active; //1px
+        width: 100%; //293px;
+        height: 2rem; //32px{
+        color: $light;
+        &:focus-visible {
+            //комбинация для отключения свойств выделения импута
+            outline: 0;
+            box-shadow: none;
+        }
+
+        &::placeholder {
+            @include p;
+            font-size: 0.875rem; //14px
+            color: $ui-active;
+            position: absolute;
+            bottom: 0.9375rem; //15px
+        }
+        &.is-invalid::placeholder {
+            //если ошибка
+            color: $ui-error;
+        }
+        &.is-invalid {
+            //если ошибка
+            border-bottom: 0.0625rem solid $ui-error;
+        }
+    }
+    &__email-text {
+        @include p;
+        color: $light;
+    }
+
+    &__checkbox {
+        margin-top: 1.25rem; //20px
+        display: flex;
+        align-items: flex-start;
+        color: $light;
+        flex-flow: column;
+
+        a {
+            font-weight: 400;
+            font-size: 0.875rem; //14px
+            line-height: 200%;
+            color: #a22dc6;
+            text-decoration: none;
+        }
+    }
+    &__checkbox-icon {
+        width: 0.9375rem; //15px
+        height: 0.9375rem; //15px
+        margin-right: 0.9375rem;
+        border: 0.0625rem solid $light; //1px
+        border-radius: 0.125rem; //2px;
+        background-color: $dark;
+        appearance: none; // Отключаем стандартный вид
+        -webkit-appearance: none;
+        position: relative;
+        &:checked {
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0.1875rem; // 3px
+                top: 0.0625rem; // 1px
+                width: 0.3125rem; // 5px
+                height: 0.625rem; // 10px
+                border: solid $light;
+                border-width: 0 0.125rem 0.125rem 0; // 2px
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &__checkbox-text {
+        @include form;
+        color: $light;
+    }
+    &__button {
+        @include button;
+        margin-top: 1.25rem; //20px
+        border: 0.0625rem solid $light;
+        width: 5.625rem; //90px;
+        height: 2.5rem; //40px;
+        background: none;
+        color: $light;
+    }
+    &__wrapper-grid {
+        margin-top: 2.5rem; //40px
+    }
+    &__navigation-grid {
+        margin-top: 2.5rem; //40px
+        display: grid;
+        grid-template-columns: repeat(2, min-content); //ограничила контент
+        grid-template-rows: repeat(3, min-content); //ограничила контент
+        grid-auto-flow: row;
+        column-gap: 4.125rem; //66px
+        row-gap: 2.5rem; //40px
+        color: $light;
+        list-style-type: none;
+        padding-left: 0;
+        .discover,
+        .shopping {
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: $light;
+        }
+        .discover,
+        .catalog,
+        .about-us,
+        .blog {
+            @include p;
+            color: $light;
+        }
+    }
+
+    &__navigator-flex {
+        white-space: nowrap;
+        list-style-type: none;
+        display: block;
+        margin-top: 2.5rem; //40px
+        padding-left: 0;
+        .information {
+            font-weight: 500;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: $light;
+        }
+        .terms-and-conditions {
+            margin-top: 2.5rem; //40px
+            @include p;
+            color: $light;
+        }
+    }
+    &__list-social-facebook,
+    &__list-social-instagram,
+    &__list-social-pinterest {
+        background-color: $dark;
+        color: $light;
+        width: 1.25rem; //24px;
+        height: 1.25rem;
+    }
+    &__wrapper-social {
+        margin-top: 2.5rem; //40px
+    }
+    &__list-social {
+        margin-top: 2.5rem; //40px
+        display: flex;
+        column-gap: 0.75rem; //12px
+        //   justify-content: center;
+    }
+
+    &__endtext {
+        padding-bottom: 3.125rem; //50px
+        text-align: center;
+        margin-top: 2.5rem; //40px
+        @include p;
+        color: $light;
+    }
+}
+// .is-invalid::placeholder {
+//     color: $ui-error;
+// }
+
+@media screen and (min-width: 48rem) {
+    .footer {
+        &__input-email {
+            display: block;
+            width: 18.3125rem; //293px;
+        }
+        &__wrapper {
+            justify-content: space-between;
+        }
+        &__wrapper-nav {
+            display: flex;
+        }
+        &__navigator-flex {
+            padding-left: 4.125rem; //66px
+        }
+        &__wrapper-social {
+            padding-left: 12.3125rem; //197px;
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .footer {
+        &__wrapper {
+            display: flex;
+        }
+        &__navigation-grid {
+            margin-top: 0;
+        }
+        &__navigator-flex {
+            margin-top: 0;
+        }
+        &__wrapper-social {
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 120rem) {
+    .footer {
+        padding-top: 4.9375rem; //79px
+        &__wrapper {
+            justify-content: space-between;
+        }
+        &__endtext {
+            padding-bottom: 3.25rem; //52px
+        }
+    }
+}

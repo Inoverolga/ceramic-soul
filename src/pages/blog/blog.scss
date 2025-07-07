@@ -1,0 +1,156 @@
+@import "../../index.scss";
+
+.blog {
+    &__title-h1 {
+        margin-top: 3.75rem; //60px
+        @include title;
+        font-weight: 500;
+        font-size: 2rem; //32px;
+    }
+    &__title-h3 {
+        @include title;
+        font-size: 1.5rem; //24px
+        font-weight: 500;
+        text-align: start;
+    }
+    &__data {
+        &-column {
+            padding: 1.5625rem 1.5625rem 0 1.5625rem; //25px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5625rem; //25px;
+        }
+    }
+
+    &__text {
+        margin-top: 1.5625rem; //25px;
+        padding: 0 1.5625rem 1.5625rem 1.5625rem;
+        @include p;
+    }
+    &__wrapper {
+        margin-top: 3.75rem; //60px;
+        margin-bottom: 3.75rem; //60px
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 2.5rem; //40px;
+    }
+    &__card {
+        border: 0.0625rem solid $dark;
+        box-shadow: 0.32125rem 0.3125rem 0.625rem 0 rgba(0, 0, 0, 0.25);
+        background: $light;
+    }
+    &__img {
+        max-inline-size: calc(
+            100% + 0.125rem
+        ); //т.к в макете рамка находит на все кроме картинки
+        //  а ширину рамки 1px по сторонам, следовательно одним из способов решения этой
+        //  проблемы - увеличить ширину на 2пикселя (т.к. по пикселю слева и справа), а затем
+        //  сместить картинку как нам нужно.
+        //   Используем свойство max-inline-size вместо width т.к. если оставить просто ширину
+        //   то max-inline-size перебьет обычную ширину.
+
+        transform: translateX(-0.0625rem) translateY(-0.0625rem); //убрали границы справа и слева
+    }
+}
+
+.pure-g {
+    row-gap: 0;
+}
+
+.btn-read {
+    @include button;
+    width: 9.0625rem; //145px;
+    height: 2rem; //32px;
+    font-size: 0.875rem; //14px;
+    &:focus {
+        outline: 0.0625rem solid $ceramic;
+        border: 0.0625rem solid $ceramic;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .blog {
+        &__wrapper {
+            padding: 1.5625rem 1.5625rem 0 1.5625rem;
+            position: relative;
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                display: block;
+                width: 12.5rem; //200px;
+                height: 0.0625rem; //1px
+                background-color: $dark;
+            }
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                display: block;
+                width: 0.0625rem;
+                height: 12.5rem;
+                background-color: $dark;
+                //     transform: rotate(90deg);
+                //     transform-origin: left top;
+            }
+        }
+        &__title-h1 {
+            font-size: 2.25rem; //36px;
+        }
+        &__data {
+            &-column {
+                row-gap: 0;
+                justify-content: space-between;
+            }
+        }
+
+        &__text {
+            margin-top: 0.9375rem; //15px;
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .blog {
+        &__title-h1 {
+            font-size: 2.5rem; //40px;
+        }
+        &__wrapper {
+            padding-top: 1.6875rem; //27px;
+            flex-wrap: nowrap;
+            column-gap: 3.125rem; //50px
+            align-items: self-start;
+        }
+        &__card {
+            width: calc((100% - 3.125rem) / 2);
+        }
+        &__img {
+            min-width: 16.25rem; //260px;
+            min-height: 15rem; //240px;
+            object-fit: cover;
+        }
+    }
+    .btn-read {
+        &:active {
+            outline: 0.0625rem solid $ceramic;
+            border: 0.0625rem solid $ceramic;
+        }
+        &:hover {
+            border: 0.0625rem solid $ceramic;
+            color: $ceramic;
+        }
+    }
+}
+
+@media screen and (min-width: 120rem) {
+    .blog {
+        &__title-h1 {
+            margin-top: 6.25rem; //100px;
+        }
+        &__wrapper {
+            align-items: normal;
+        }
+    }
+}

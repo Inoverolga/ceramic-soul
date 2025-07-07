@@ -1,0 +1,134 @@
+@import "../../component/git/git.scss";
+@import "../../index.scss";
+.about {
+    &__input {
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+    &__title-h1 {
+        margin-top: 3.75rem; //60px
+        @include title;
+        font-weight: 500;
+        font-size: 2rem; //32px;
+    }
+    &__content {
+        margin-top: 3.75rem; //60px
+        display: flex;
+        flex-direction: column;
+        row-gap: 3.5625rem; //57px
+        &-wrapper-text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            &-text {
+                @include p;
+            }
+        }
+    }
+    &__map-wrapper {
+        margin-top: 3.75rem; //60px;
+        margin-bottom: 3.75rem; //60px
+        iframe {
+            width: 100%;
+            height: 12.875rem; //206px; можно четко задавать размеры, контент не вылезет
+        }
+    }
+}
+
+.about .git {
+    padding: 0;
+    margin-top: 3.75rem;
+    //чтобы контейнер из компонета не применялся повторно
+    .container {
+        padding: 0;
+    }
+}
+
+.about .map {
+    //чтобы контейнер из компонета не применялся повторно
+    .container {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .about {
+        &__title-h1 {
+            font-size: 2.25rem; //36px;
+        }
+        &__content {
+            row-gap: 2.1875rem; //35px
+        }
+        &__content-img {
+            max-width: 37.5rem; //600px
+            max-height: 25.75rem; //412px
+            margin: 0 auto;
+        }
+        &__map-wrapper {
+            padding: 0 1.75rem; //28px
+            iframe {
+                height: 25rem; //400px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .about {
+        &__title-h1 {
+            font-size: 2.5rem; //40px;
+        }
+        &__map-wrapper {
+            padding: 0;
+            iframe {
+                display: block;
+                margin: 0 auto;
+                width: 41.4375rem; //663px
+                height: 31.25rem; //500px;
+            }
+        }
+        &__content {
+            flex-direction: row;
+            column-gap: 1.25rem; //20px
+            &-img {
+                min-width: 34.375rem; //550px;
+                min-height: 23.625rem; //378px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 120rem) {
+    .about {
+        &__title-h1 {
+            margin-top: 6.25rem; //100px;
+        }
+        &__content {
+            margin-top: 6.25rem; //100px;
+            &-text {
+                font-size: 1.25rem; //20px;
+            }
+            &-img {
+                min-width: 43.75rem; //700px;
+                min-height: 30.0625rem; //481px;
+                object-fit: cover;
+            }
+        }
+        &__map-wrapper {
+            margin-top: 5rem; //80px;
+            margin-bottom: 6.25rem; //100px
+
+            iframe {
+                width: 50.0625; //801px
+                height: 37.75rem; //604px; можно четко задавать размеры, контент не вылезет
+            }
+        }
+    }
+}
+@media screen and (min-width: 120rem) {
+    .about .git {
+        margin-top: 6.25rem; //100px
+    }
+}

@@ -1,1 +1,1 @@
-h1{font-size:80px}/*# sourceMappingURL=promo.min.css.map */
+@import"/node_modules/modern-normalize/modern-normalize.css";@font-face{font-family:"Barlow";src:url("../node_modules/@fontsource/barlow/");font-weight:normal;font-style:normal}h1,h2,h3,h4,h5,p,ol,ul,figure{margin:0}ol[role=list],ul[role=list]{list-style:none;padding-inline:0}h1,h2,h3,h4,h5{font-size:inherit;font-weight:inherit}img{display:block;max-inline-size:100%;margin:0}html{font-family:"Barlow",sans-serif;scroll-behavior:smooth}h1{font-size:100px;color:#db0c35}/*# sourceMappingURL=promo.min.css.map */

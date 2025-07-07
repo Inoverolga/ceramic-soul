@@ -1,0 +1,118 @@
+@import "../../index.scss"; //импортировали миксины и переменные
+
+.activities {
+    padding-top: 3.75rem; //60px
+    & .h3-1 {
+        margin-top: 1.25rem; //20px
+    }
+    &__img {
+        width: 100%;
+        margin-top: 2.5rem; //40px
+        box-shadow: 0.3125rem 0.3125rem 0.625rem 0 rgba(0, 0, 0, 0.25); //5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    }
+    &__text {
+        margin-top: 1.25rem; //20px
+        @include p;
+        span {
+            @include span;
+        }
+    }
+}
+
+.title-h2 {
+    @include title;
+    font-weight: 500;
+    font-size: 2rem; //32px
+}
+.title-h3 {
+    @include title;
+    font-weight: 500;
+    font-size: 1.25rem; // 20px
+}
+
+.pure-g {
+    row-gap: 2.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+    .title-h2 {
+        font-size: 2.25rem; //36px
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .title-h2 {
+        font-size: 2.5rem; //40px
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .title-h3 {
+        font-size: 1.5rem; //24px
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .activities {
+        padding-top: 3.75rem; //60px
+        //   padding: 3.75rem 5.9375rem 0 5.9375rem; //60px 95px 0 95px
+        &__content-wrapper {
+            padding: 0 5.9375rem 0 5.9375rem; //0 95px 0 95px
+        }
+        & .h3-1 {
+            margin-top: 2.5rem; //40px
+        }
+        &__text {
+            margin-top: 1.5625rem; //25px
+            font-size: 1.25rem; //20px
+
+            span {
+                font-size: 1.25rem; //20px
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .activities {
+        &__col {
+            padding: 0 0.625rem;
+        }
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .activities {
+        padding: 3.75rem 0 0 0; //60px 119px 0 119px
+        & .h3-1 {
+            margin-top: 0;
+        }
+        &__img {
+            margin-top: 3.75rem; //60px
+        }
+        &__col {
+            padding: 0 0.625rem;
+        }
+        &__text {
+            &_fixed {
+                width: 34.75rem; //556px
+            }
+        }
+        &__content-wrapper {
+            padding: 0;
+            .pure-g {
+                margin-top: 5rem; //80px
+                flex-flow: nowrap;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 120rem) {
+    .activities {
+        padding: 6.25rem 0 0 0; //100px 119px 0 119px
+        &__text {
+            margin-top: 1.875rem; //30px
+        }
+    }
+}

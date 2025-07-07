@@ -1,3 +1,11 @@
 {"trailingComma": "all",
         "tabWidth": 4,
-        "semi": true}
+        "semi": true,
+"overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss"
+      }
+    }
+  ]}
