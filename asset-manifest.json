@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e4c6e9f4.css",
+    "main.js": "/static/js/main.d23b8f1d.js",
+    "static/js/453.c7d66718.chunk.js": "/static/js/453.c7d66718.chunk.js",
+    "static/media/crafts-5276736_1280 1.png": "/static/media/crafts-5276736_1280 1.94dad99c26f1df69808b.png",
+    "static/media/tea (1).png": "/static/media/tea (1).cbbd4c252b49fbd9da40.png",
+    "static/media/tea-ceremony-7807230_1280 1 (1).png": "/static/media/tea-ceremony-7807230_1280 1 (1).d55816675fe917e79151.png",
+    "static/media/tea-ceremony-7807230_1280 2.png": "/static/media/tea-ceremony-7807230_1280 2.93925e7f62f7e499c50b.png",
+    "static/media/tea-6675004_1280 1 (1).png": "/static/media/tea-6675004_1280 1 (1).fb940ca5d4f4a71bfe44.png",
+    "static/media/store.png": "/static/media/store.200a2c489fde73eb2aec.png",
+    "static/media/tea-7968441_1280 1 (1).png": "/static/media/tea-7968441_1280 1 (1).46201973ff25566468b7.png",
+    "static/media/potter.jpg": "/static/media/potter.b2ad54e5bd91cf868602.jpg",
+    "static/media/tea-6675004_1280 2.png": "/static/media/tea-6675004_1280 2.77caf84c3ffc43ccdf9f.png",
+    "static/media/tea-7968441_1280 2.png": "/static/media/tea-7968441_1280 2.c2fbd02fc6ffd294802a.png",
+    "static/media/tea-3057645_1280 1 (1).png": "/static/media/tea-3057645_1280 1 (1).5cc5e79f5b4a50820f35.png",
+    "static/media/ceramic-4510917_1280 1.png": "/static/media/ceramic-4510917_1280 1.51ebd1f464c7538e702b.png",
+    "static/fonts/barlow-latin-400-italic.woff2": "/static/fonts/barlow-latin-400-italic.867dd68b064a8a7e421a.woff2",
+    "static/fonts/barlow-latin-400-normal.woff2": "/static/fonts/barlow-latin-400-normal.7fa387951673abf164b1.woff2",
+    "static/fonts/barlow-latin-400-italic.woff": "/static/fonts/barlow-latin-400-italic.17dc6b4f650152c900c1.woff",
+    "static/fonts/barlow-latin-400-normal.woff": "/static/fonts/barlow-latin-400-normal.c5f3640b11df9414facb.woff",
+    "static/media/ceramic-vase copy.jpg": "/static/media/ceramic-vase copy.dc9871019cb27597834d.jpg",
+    "static/fonts/barlow-latin-ext-400-italic.woff2": "/static/fonts/barlow-latin-ext-400-italic.f3b87ddba52ae25486a2.woff2",
+    "static/fonts/barlow-latin-ext-400-normal.woff2": "/static/fonts/barlow-latin-ext-400-normal.da26d162ff5af71d6590.woff2",
+    "static/fonts/barlow-latin-ext-400-italic.woff": "/static/fonts/barlow-latin-ext-400-italic.c242036fbbe091889289.woff",
+    "static/fonts/barlow-latin-ext-400-normal.woff": "/static/fonts/barlow-latin-ext-400-normal.47d566c3b1293dfd9d77.woff",
+    "static/media/logo.png": "/static/media/logo.0b14a9a08912a6867e34.png",
+    "static/fonts/barlow-vietnamese-400-italic.woff2": "/static/fonts/barlow-vietnamese-400-italic.df517ba92cb10678be9f.woff2",
+    "static/fonts/barlow-vietnamese-400-normal.woff2": "/static/fonts/barlow-vietnamese-400-normal.7e78e8338af7efeda712.woff2",
+    "static/fonts/barlow-vietnamese-400-italic.woff": "/static/fonts/barlow-vietnamese-400-italic.db7239eff0ac6477662d.woff",
+    "static/fonts/barlow-vietnamese-400-normal.woff": "/static/fonts/barlow-vietnamese-400-normal.2d6836f45b2037be41f3.woff",
+    "static/media/vase.png": "/static/media/vase.5b83ef6f51bea1544df4.png",
+    "index.html": "/index.html",
+    "main.e4c6e9f4.css.map": "/static/css/main.e4c6e9f4.css.map",
+    "main.d23b8f1d.js.map": "/static/js/main.d23b8f1d.js.map",
+    "453.c7d66718.chunk.js.map": "/static/js/453.c7d66718.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4c6e9f4.css",
+    "static/js/main.d23b8f1d.js"
+  ]
+}
